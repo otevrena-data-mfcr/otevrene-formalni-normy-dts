@@ -207,6 +207,7 @@ declare interface DistribuceZaklad extends Entity {
 
 }
 
+/**Fyzická podoba datové sady v konkrétním formátu. */
 export declare interface DistribuceSoubor extends DistribuceZaklad {
 
   /**Název distribuce datové sady
@@ -251,6 +252,7 @@ export declare interface DistribuceSoubor extends DistribuceZaklad {
   typ_média_balíčku?: IRI<MediaType>;
 }
 
+/**Fyzická podoba datové sady jako konkrétní služba. */
 export declare interface DistribuceSluzba extends DistribuceZaklad {
 
   /**Název distribuce datové sady
@@ -266,6 +268,7 @@ export declare interface DistribuceSluzba extends DistribuceZaklad {
 
 }
 
+/**Konceptuální entita reprezentující datovou službu zpřístupňující data datové sady. */
 export declare interface DatovaSluzba extends Entity {
 
   /**Hodnota @type */
