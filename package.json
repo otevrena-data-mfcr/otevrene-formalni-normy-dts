@@ -1,10 +1,9 @@
 {
-  "name": "otevrene-formalni-normy-dts-gen",
+  "name": "otevrene-formalni-normy-dts",
   "version": "0.1.1",
-  "private": "true",
   "description": "Typescript definition files for https://github.com/opendata-mvcr/otevrene-formalni-normy",
-  "main": "./dist/schema/index.js",
-  "types": "./dist/schema/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": "Martin Kopeček <martin.kopecek@smallhill.cz>",
   "license": "Apache-2.0",
   "dependencies": {},
@@ -14,5 +13,8 @@
   "scripts": {
     "build": "tsc",
     "test": "tsc --noEmit"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
