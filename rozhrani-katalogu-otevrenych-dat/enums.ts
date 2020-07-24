@@ -268,3 +268,25 @@ export declare type PodminkyUzitiOsobniUdaje = "https://data.gov.cz/podmínky-u�
 
 export declare type MediaType = "http://www.iana.org/assignments/media-types/application/json" | string;
 export declare type FileType = "http://publications.europa.eu/resource/authority/file-type/ZIP" | string;
+
+
+export enum PodminkyUzitiDiloEnum {
+  NeobsahujeAutorkaDila = "https://data.gov.cz/podmínky-užití/neobsahuje-autorská-díla/",
+  CCBY4 = "https://creativecommons.org/licenses/by/4.0/",
+  ObsahujeViceAutorskychDel = "https://data.gov.cz/podmínky-užití/obsahuje-více-autorských-děl/"
+}
+
+export enum PodminkyUzitiDatabazeDiloEnum {
+  NeniChranenouDatabazi = "https://data.gov.cz/podmínky-užití/není-autorskoprávně-chráněnou-databází/",
+  CCBY40 = "https://creativecommons.org/licenses/by/4.0/"
+};
+
+export enum PodminkyUzitiDatabazeZvlastniEnum {
+  NeniChranenaZvlastnimPravem = "https://data.gov.cz/podmínky-užití/není-chráněna-zvláštním-právem-pořizovatele-databáze/",
+  CC0 = "https://creativecommons.org/publicdomain/zero/1.0/"
+};
+
+export enum PodminkyUzitiOsobniUdajeEnum {
+  NeobsahujeOsobniUdaje = "https://data.gov.cz/podmínky-užití/neobsahuje-osobní-údaje/",
+  ObsahujeOsobniUdaje = "https://data.gov.cz/podmínky-užití/obsahuje-osobní-údaje/"
+};

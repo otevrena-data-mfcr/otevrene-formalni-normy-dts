@@ -1,14 +1,4 @@
-import { Lang, Continent, RuianStat, RuianKraj, Theme, Frequency, EuroVoc } from "./enums";
-
-
-export declare type PodminkyUzitiDilo = "https://data.gov.cz/podmínky-užití/neobsahuje-autorská-díla/" | "https://creativecommons.org/licenses/by/4.0/" | "https://data.gov.cz/podmínky-užití/obsahuje-více-autorských-děl/";
-export declare type PodminkyUzitiDatabazeDilo = "https://data.gov.cz/podmínky-užití/není-autorskoprávně-chráněnou-databází/" | "https://creativecommons.org/licenses/by/4.0/";
-export declare type PodminkyUzitiDatabazeZvlastni = "https://data.gov.cz/podmínky-užití/není-chráněna-zvláštním-právem-pořizovatele-databáze/" | "https://creativecommons.org/publicdomain/zero/1.0/";
-export declare type PodminkyUzitiOsobniUdaje = "https://data.gov.cz/podmínky-užití/neobsahuje-osobní-údaje/" | "https://data.gov.cz/podmínky-užití/obsahuje-osobní-údaje/";
-
-export declare type MediaType = "http://www.iana.org/assignments/media-types/application/json" | string;
-export declare type FileType = "http://publications.europa.eu/resource/authority/file-type/ZIP" | string;
-
+import { Lang, Continent, RuianStat, RuianKraj, Theme, Frequency, EuroVoc, PodminkyUzitiDilo, PodminkyUzitiDatabazeZvlastni, PodminkyUzitiDatabazeDilo, PodminkyUzitiOsobniUdaje, FileType, MediaType } from "./enums";
 
 /* Structure types */
 declare type IRI<E = string> = E;
