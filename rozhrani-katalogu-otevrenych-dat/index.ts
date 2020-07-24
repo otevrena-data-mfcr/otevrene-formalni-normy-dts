@@ -1,6 +1,7 @@
 import { Lang } from "./enums";
 import { Entity } from "../base";
-import { Continent, RuianStat, RuianKraj, Theme, Frequency, EuroVoc, PodminkyUzitiDilo, PodminkyUzitiDatabazeZvlastni, PodminkyUzitiDatabazeDilo, PodminkyUzitiOsobniUdaje, FileType, MediaType } from "./interfaces";
+import { ContinentEntity, RuianStatEntity, RuianKrajEntity, RuianOstatniEntity, ThemeEntity, FrequencyEntity, PodminkyUzitiDiloEntity, PodminkyUzitiDatabazeZvlastniEntity, PodminkyUzitiDatabazeDiloEntity, PodminkyUzitiOsobniUdajeEntity, FileTypeEntity, MediaTypeEntity, EuroVocEntity } from "./interfaces";
+
 
 export * from "./enums";
 
@@ -9,9 +10,8 @@ declare type IRI<E extends Entity> = E["iri"];
 
 declare type LangContainer<T> = { [lang in Lang]?: T };
 
-declare type Location = Continent; // ready to add more location IRIs
-declare type Ruian = RuianStat | RuianKraj | RuianOstatni; // ready to add more Ruian IRIs
-declare type RuianOstatni = { iri: string };
+declare type Ruian = RuianStatEntity | RuianKrajEntity | RuianOstatniEntity; // ready to add more Ruian IRIs
+
 
 /* MAIN DECLARATIONS */
 
@@ -86,15 +86,15 @@ export declare interface DatovaSada extends Entity {
 
   /**Téma
    * @description Tato vlastnost odkazuje na kategorii či téma datové sady. Datová sada může být popsána více tématy.
-   * @type Několik IRI. Alespoň jedno téma musí být z evropského číselníku datových témat.
+   * @type enum Theme - Několik IRI. Alespoň jedno téma musí být z evropského číselníku datových témat.
    */
-  téma: [IRI<Theme>, ...Array<IRI<Entity>>];
+  téma: [IRI<ThemeEntity>, ...Array<IRI<Entity>>];
 
   /**Periodicita aktualizace
    * @description Tato vlastnost odkazuje na frekvenci, se kterou je datová sada aktualizována.
-   * @type IRI položky z evropského číselníku frekvencí
+   * @type enum Frequency - IRI položky z evropského číselníku frekvencí
    */
-  periodicita_aktualizace: IRI<Frequency>;
+  periodicita_aktualizace: IRI<FrequencyEntity>;
 
   /**Klíčová slova
    * @description Tato vlastnost obsahuje klíčové slovo nebo značku popisující datovou sadu.
@@ -104,22 +104,22 @@ export declare interface DatovaSada extends Entity {
 
   /**Související geografické území - prvek z RÚIAN
    * @description Tato vlastnost odkazuje na územní prvek RÚIAN pokrytý datovou sadou. Datová sada může pokrývat více územních prvků RÚIAN.
-   * @type IRI územního prvku RÚIAN
+   * @type enum RuianStat | RuianKraj - IRI územního prvku RÚIAN
    */
   prvek_rúian: IRI<Ruian>[];
 
   /**Související geografické území
    * Tato vlastnost odkazuje na geografickou oblast pokrytou datovou sadou. Datová sada může být popsána více geografickými oblastmi.
-   * @type IRI položek z evropských číselníků zemí, kontinentů, míst nebo IRI objektu z Geonames.
+   * @type enum Continent - IRI položek z evropských číselníků zemí, kontinentů, míst nebo IRI objektu z Geonames.
    */
-  geografické_území?: (IRI<Location> | IRI<Entity>)[];
+  geografické_území?: (IRI<ContinentEntity> | IRI<Entity>)[];
 
   /**Časové pokrytí
    * @description Tato vlastnost odkazuje na časový úsek pokrytý datovou sadou.
    * @type Entita typu dct:PeriodOfTime s vlastnostmi dcat:startDate a dcat:endDate, které mají datový typ xsd:date.
    */
   časové_pokrytí?: {
-    typ: string,
+    typ: "Časový interval",
     začátek: string,
     konec: string
   };
@@ -150,7 +150,7 @@ export declare interface DatovaSada extends Entity {
    * @description Tato vlastnost odkazuje na kategorii či téma datové sady dle EuroVoc. Datová sada může být popsána více tématy.
    * @type IRI konceptu z evropského tezauru EuroVoc
    */
-  koncept_euroVoc?: IRI<EuroVoc>[];
+  koncept_euroVoc?: IRI<EuroVocEntity>[];
 
   /**Prostorové rozlišení v metrech
    * @description Tato vlastnost určuje prostorové rozlišení dat v datové sadě v metrech. Jedná se o nejmenší prostorový rozdíl v datové sadě.
@@ -193,10 +193,14 @@ declare interface DistribuceZaklad extends Entity {
    */
   podmínky_užití: {
     typ: "Specifikace podmínek užití", // ???
-    autorské_dílo: IRI<PodminkyUzitiDilo>,
-    databáze_chráněná_zvláštními_právy: IRI<PodminkyUzitiDatabazeZvlastni>,
-    databáze_jako_autorské_dílo: IRI<PodminkyUzitiDatabazeDilo>,
-    osobní_údaje: IRI<PodminkyUzitiOsobniUdaje>
+    /**@type enum PodminkyUzitiDilo */
+    autorské_dílo: IRI<PodminkyUzitiDiloEntity>,
+    /**@type enum PodminkyUzitiDatabazeZvlastni */
+    databáze_chráněná_zvláštními_právy: IRI<PodminkyUzitiDatabazeZvlastniEntity>,
+    /**@type enum PodminkyUzitiDatabazeDilo */
+    databáze_jako_autorské_dílo: IRI<PodminkyUzitiDatabazeDiloEntity>,
+    /**@type enum PodminkyUzitiOsobniUdaje */
+    osobní_údaje: IRI<PodminkyUzitiOsobniUdajeEntity>
   };
 
   /**Přístupové URL
@@ -225,13 +229,13 @@ export declare interface DistribuceSoubor extends DistribuceZaklad {
    * @description Tato vlastnost odkazuje na typ souboru s distribucí.
    * @type IRI položky z evropského číselníku typů souboru (https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
    */
-  formát: IRI<FileType>;
+  formát: IRI<FileTypeEntity>;
 
   /**Media type souboru ke stažení
    * @description Tato vlastnost odkazuje na typ média distribuce tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [IANA-MEDIA-TYPES].
    * @type IRI Media type z rejstříku IANA.
    */
-  typ_média: IRI<MediaType>;
+  typ_média: IRI<MediaTypeEntity>;
 
   /**Odkaz na strojově čitelné schéma souboru ke stažení
    * @description Tato vlastnost odkazuje na ustanovené schéma, jímž se popisovaná distribuce řídí.
@@ -243,13 +247,13 @@ export declare interface DistribuceSoubor extends DistribuceZaklad {
    * @description Tato vlastnost odkazuje na media typ kompresního formátu souboru ke stažení tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [IANA-MEDIA-TYPES]. Kompresní formát určuje techniku použitou ke zmenšení velikosti jednoho souboru ke stažení.
    * @type IRI Media type z rejstříku IANA.
    */
-  typ_média_komprese?: IRI<MediaType>;
+  typ_média_komprese?: IRI<MediaTypeEntity>;
 
   /**Media type použitého balíčkovacího formátu souboru ke stažení
    * @description Tato vlastnost odkazuje na media typ balíčkovacího formátu souboru ke stažení tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [IANA-MEDIA-TYPES]. Balíčkovací formát určuje techniku použitou k zabalení více souborů do jednoho.
    * @type IRI Media type z rejstříku IANA.
    */
-  typ_média_balíčku?: IRI<MediaType>;
+  typ_média_balíčku?: IRI<MediaTypeEntity>;
 }
 
 /**Fyzická podoba datové sady jako konkrétní služba. */
