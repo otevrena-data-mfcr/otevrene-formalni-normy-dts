@@ -49,7 +49,6 @@ const dataset: DatovaSada = {
 #### Enum hodnoty
 
 Některé časté hodnoty jsou uloženy jako enum typy. Jsou to:
-  - Lang
   - Frequency
   - Theme
   - RuianStat
