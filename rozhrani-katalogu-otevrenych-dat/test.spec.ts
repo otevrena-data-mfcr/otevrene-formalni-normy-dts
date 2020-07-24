@@ -1,8 +1,10 @@
-import { Dataset, Catalog } from ".";
+import { DatovaSada, Katalog, PodminkyUzitiDiloEnum } from ".";
 
 // Example JSON-LD files from https://ofn.gov.cz/rozhran%C3%AD-katalog%C5%AF-otev%C5%99en%C3%BDch-dat/draft/#polo%C5%BEky-katalog-n%C3%A1zev
 
-const catalog: Catalog = {
+const enumTest = PodminkyUzitiDiloEnum.NeobsahujeAutorskaDila;
+
+const catalog: Katalog = {
   "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/katalog",
   "typ": "Katalog",
@@ -31,7 +33,7 @@ const catalog: Catalog = {
   ]
 };
 
-const dataset: Dataset =
+const dataset: DatovaSada =
 {
   "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/datové-sady/vld",

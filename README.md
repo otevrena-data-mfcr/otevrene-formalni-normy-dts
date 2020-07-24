@@ -15,9 +15,9 @@ Pro použití definice jednodušše nainstalujte balíček `otevrene-formalni-no
 ### rozhrani-katalogu-otevrenych-dat
 
 ```ts
-import { Catalog, Dataset } from "otevrene-formalni-normy-dts";
+import { Katalog, DatovaSada } from "otevrene-formalni-normy-dts";
 
-const catalog: Catalog = {
+const catalog: Katalog = {
   "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/katalog",
   "typ": "Katalog",
