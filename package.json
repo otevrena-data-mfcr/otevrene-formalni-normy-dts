@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Martin Kopeček <martin.kopecek@smallhill.cz>",
-  "license": "Apache-2.0",
+  "license": "GPL-3.0-or-later",
   "dependencies": {},
   "devDependencies": {
     "typescript": "^3.9.7"
@@ -16,5 +16,13 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otevrena-data-mfcr/otevrene-formalni-normy-dts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/otevrena-data-mfcr/otevrene-formalni-normy-dts/issues"
+  },
+  "homepage": "https://github.com/otevrena-data-mfcr/otevrene-formalni-normy-dts#readme"
 }
