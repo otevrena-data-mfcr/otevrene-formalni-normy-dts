@@ -2,6 +2,11 @@
 
 JSON-LD TypeScript definice pro [opendata-mvcr/otevrene-formalni-normy](https://github/opendata-mvcr/otevrene-formalni-normy).
 
+## Stav
+
+V současnosti jsou definice vytvořené pouze pro následující normy:
+ - rozhrani-katalogu-otevrenych-dat
+ 
 ## Instalace
 
 Pro použití definice jednodušše nainstalujte balíček `otevrene-formalni-normy-dts` z NPM repozitáře:
