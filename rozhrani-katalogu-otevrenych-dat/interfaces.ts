@@ -1,5 +1,6 @@
-import { Entity } from "../base";
-import { Frequency, RuianKraj, RuianStat, Theme, PodminkyUzitiDilo, PodminkyUzitiDatabazeDilo, PodminkyUzitiDatabazeZvlastni, PodminkyUzitiOsobniUdaje } from "./enums";
+import { Entity } from "../common/interfaces";
+import { RuianKraj, RuianStat } from "../common/enums";
+import { Frequency, Theme, PodminkyUzitiDilo, PodminkyUzitiDatabazeDilo, PodminkyUzitiDatabazeZvlastni, PodminkyUzitiOsobniUdaje } from "./enums";
 
 export declare interface ThemeEntity extends Entity {
   iri: Theme | string;

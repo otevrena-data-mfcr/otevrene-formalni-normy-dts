@@ -1,5 +1,5 @@
-import { Lang } from "./enums";
-import { Entity } from "../base";
+import { Lang } from "../common/enums";
+import { Entity, OVMEntity } from "../common/interfaces";
 import { ContinentEntity, RuianStatEntity, RuianKrajEntity, RuianOstatniEntity, ThemeEntity, FrequencyEntity, PodminkyUzitiDiloEntity, PodminkyUzitiDatabazeZvlastniEntity, PodminkyUzitiDatabazeDiloEntity, PodminkyUzitiOsobniUdajeEntity, FileTypeEntity, MediaTypeEntity, EuroVocEntity } from "./interfaces";
 
 
@@ -32,9 +32,9 @@ export declare interface Katalog extends Entity {
 
   /**Poskytovatel
    * @description Poskytovatel datového katalogu. Jedná se o Orgán veřejné moci (OVM).
-   * @type IRI OVM z Registru práv a povinností (RPP).
+   * @type enum OVM - IRI OVM z Registru práv a povinností (RPP).
    */
-  poskytovatel: IRI<Entity>;
+  poskytovatel: IRI<OVMEntity>;
 
   /**Kontaktní bod - jméno a email
    * @description Tato vlastnost obsahuje kontaktní informace, které mohou být využity pro zasílání připomínek ke katalogu.
@@ -80,9 +80,9 @@ export declare interface DatovaSada extends Entity {
 
   /**Poskytovatel
    * @description Poskytovatel datové sady. Jedná se o Orgán veřejné moci (OVM).
-   * @type IRI OVM z Registru práv a povinností (RPP).
+   * @type enum OVM - IRI OVM z Registru práv a povinností (RPP).
    */
-  poskytovatel: string;
+  poskytovatel: IRI<OVMEntity>;
 
   /**Téma
    * @description Tato vlastnost odkazuje na kategorii či téma datové sady. Datová sada může být popsána více tématy.
