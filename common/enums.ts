@@ -185,7 +185,8 @@ export declare enum Lang {
 }
 
 export enum OVM {
-    MF = "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947"
+    MF = "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/00006947",
+    GFŘ = "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/72080043"
 }
 
 export enum RuianStat {
