@@ -187,6 +187,11 @@ declare interface DistribuceZaklad extends Entity {
   /**Hodnota @type */
   typ: "Distribuce";
 
+  /**Název distribuce datové sady
+   * @description Tato vlastnost obsahuje název distribuce.
+   */
+  název?: LangContainer<string>;
+
   /**Specifikace podmínek užití
    * @description Tato vlastnost odkazuje na strukturovaný popis podmínek užití této distribuce datové sady. Hodnoty se řídí návodem na stanovení podmínek užití.
    * @type Entita typu pu:Specifikace s vlastnostmi pu:autorské-dílo, pu:databáze-jako-autorské-dílo, pu:databáze-chráněná-zvláštními-právy a pu:osobní-údaje.
@@ -213,11 +218,6 @@ declare interface DistribuceZaklad extends Entity {
 
 /**Fyzická podoba datové sady v konkrétním formátu. */
 export declare interface DistribuceSoubor extends DistribuceZaklad {
-
-  /**Název distribuce datové sady
-   * @description Tato vlastnost obsahuje název distribuce.
-   */
-  název?: LangContainer<string>;
 
   /**Odkaz na stažení souboru
    * @description Tato vlastnost obsahuje URL, které je přímým odkazem na stažitelný soubor v daném formátu.
@@ -258,11 +258,6 @@ export declare interface DistribuceSoubor extends DistribuceZaklad {
 
 /**Fyzická podoba datové sady jako konkrétní služba. */
 export declare interface DistribuceSluzba extends DistribuceZaklad {
-
-  /**Název distribuce datové sady
-   * @description Tato vlastnost obsahuje název distribuce.
-   */
-  název: LangContainer<string>;
 
   /**Vazba: Přístupová služba
    * @description Datová služba zpřístupňující distribuci datové sady.
