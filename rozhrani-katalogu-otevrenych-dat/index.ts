@@ -171,10 +171,10 @@ export declare interface DatovaSada extends Entity {
   je_součástí?: IRI<DatovaSada>;
 
   /**Vazba: Distribuce datové sady
-   * @description Tato vlastnost odkazuje z datové sady na její distribuci.
+   * @description Tato vlastnost odkazuje z datové sady na její distribuci. Povinná, pokud se nejedná o zastřešující datovou sadu datové série.
    * @type Entita typu distribuce datové sady.
    */
-  distribuce: Distribuce[]
+  distribuce?: Distribuce[]
 
 }
 
