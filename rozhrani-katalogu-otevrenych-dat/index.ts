@@ -270,6 +270,9 @@ export declare interface DistribuceSluzba extends DistribuceZaklad {
 /**Konceptuální entita reprezentující datovou službu zpřístupňující data datové sady. */
 export declare interface DatovaSluzba {
 
+  /**Identifikátor datové služby */
+  iri?: IRI<any>,
+
   /**Hodnota @type */
   typ: "Datová služba",
 
