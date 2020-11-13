@@ -1,5 +1,7 @@
 # TypeScriptové definice pro [opendata-mvcr/otevrene-formalni-normy](https://github.com/opendata-mvcr/otevrene-formalni-normy)
 
+[![npm version](https://badge.fury.io/js/otevrene-formalni-normy-dts.svg)](https://badge.fury.io/js/otevrene-formalni-normy-dts)
+
 JSON-LD TypeScript definice pro [opendata-mvcr/otevrene-formalni-normy](https://github/opendata-mvcr/otevrene-formalni-normy).
 
 ## Stav
