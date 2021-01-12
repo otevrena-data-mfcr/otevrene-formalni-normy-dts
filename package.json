@@ -1,6 +1,6 @@
 {
   "name": "otevrene-formalni-normy-dts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript definition files for https://github.com/opendata-mvcr/otevrene-formalni-normy",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
