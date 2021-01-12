@@ -17,7 +17,7 @@ declare type Ruian = RuianStatEntity | RuianKrajEntity | RuianOstatniEntity; // 
 
 /**Konceptuální entita reprezentující datový katalog. */
 export declare interface Katalog extends Entity {
-  "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld";
+  "@context": " https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld";
 
   /**Hodnota @type */
   typ: "Katalog";
@@ -61,7 +61,7 @@ export declare interface Katalog extends Entity {
 
 /**Konceptuální entita reprezentující poskytovanou informaci. */
 export declare interface DatovaSada extends Entity {
-  "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld";
+  "@context": " https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld";
 
   /**Hodnota @id */
   iri: IRI<Entity>;

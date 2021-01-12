@@ -1,12 +1,12 @@
 import { DatovaSada, Katalog } from ".";
 import { PodminkyUzitiDilo } from "./enums";
 
-// Example JSON-LD files from https://ofn.gov.cz/rozhran%C3%AD-katalog%C5%AF-otev%C5%99en%C3%BDch-dat/draft/#polo%C5%BEky-katalog-n%C3%A1zev
+// Example JSON-LD files from https://ofn.gov.cz/rozhran%C3%AD-katalog%C5%AF-otev%C5%99en%C3%BDch-dat/2021-01-11/#dcat-ap-dokumenty
 
 const enumTest = PodminkyUzitiDilo.NeobsahujeAutorskaDila;
 
 const catalog: Katalog = {
-  "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+  "@context": " https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/katalog",
   "typ": "Katalog",
   "název": {
@@ -36,7 +36,7 @@ const catalog: Katalog = {
 
 const dataset: DatovaSada =
 {
-  "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+  "@context": " https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/datové-sady/vld",
   "typ": "Datová sada",
   "název": {

@@ -26,7 +26,7 @@ Pro použití definice jednodušše nainstalujte balíček `otevrene-formalni-no
 import { Katalog, DatovaSada } from "otevrene-formalni-normy-dts";
 
 const catalog: Katalog = {
-  "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+  "@context": " https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/katalog",
   "typ": "Katalog",
   "název": {
@@ -37,7 +37,7 @@ const catalog: Katalog = {
 };
 
 const dataset: DatovaSada = {
-  "@context": "https://pod-test.mvcr.gov.cz/otevřené-formální-normy/rozhraní-katalogů-otevřených-dat/draft/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+  "@context": " https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
   "iri": "https://data.gov.cz/lkod/mdcr/datové-sady/vld",
   "typ": "Datová sada",
   "název": {
