@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tsc --noEmit"
+    "test": "tsc --noEmit",
+    "prepare": "npm run build"
   },
   "files": [
     "dist"
